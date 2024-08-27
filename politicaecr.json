@@ -1,0 +1,46 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+       
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "iam:ListPolicies",
+                "sqs:ListQueues",
+                "sns:ListTopics",
+                "iam:ListRoles",
+                "sdb:ListDomains",
+                "ec2:DescribeSecurityGroups",
+                "codeartifact:ListDomains",
+                "cloudformation:DescribeStacks",
+                "kms:ListKeys",
+                "iam:PassRole",
+                "elasticbeanstalk:DescribeEnvironments",
+                "s3:ListAllMyBuckets",
+                "ec2:DescribeVpcs",
+                "kms:ListAliases",
+                "cloudfront:ListDistributions",
+                "elasticbeanstalk:DescribeApplications",
+                "ecr:DescribeRepositories",
+                "sts:GetCallerIdentity",
+                "ec2:DescribeSubnets"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ecrpermisos",
+            "Effect": "Allow",
+            "Action": [
+                "ecr:DescribeRegistry",
+                "ecr:GetAuthorizationToken",
+                "ecr:InitiateLayerUpload",
+                "ecr:UploadLayerPart",
+                "ecr:CompleteLayerUpload",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:PutImage"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
